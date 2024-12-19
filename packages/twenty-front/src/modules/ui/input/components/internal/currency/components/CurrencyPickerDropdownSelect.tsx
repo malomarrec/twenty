@@ -12,12 +12,10 @@ export const CurrencyPickerDropdownSelect = ({
   currencies,
   selectedCurrency,
   onChange,
-  id
 }: {
   currencies: Currency[];
   selectedCurrency?: Currency;
   onChange: (currency: Currency) => void;
-  id?:string
 }) => {
   const [searchFilter, setSearchFilter] = useState<string>('');
 
@@ -34,7 +32,7 @@ export const CurrencyPickerDropdownSelect = ({
   );
 
   return (
-    <DropdownMenu id={id}>
+    <DropdownMenu>
       <DropdownMenuSearchInput
         value={searchFilter}
         onChange={(event) => setSearchFilter(event.target.value)}
